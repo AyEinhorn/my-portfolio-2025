@@ -8,6 +8,32 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+          950: '#082f49',
+        },
+        accent: {
+          50: '#fdf4ff',
+          100: '#fae8ff',
+          200: '#f5d0fe',
+          300: '#f0abfc',
+          400: '#e879f9',
+          500: '#d946ef',
+          600: '#c026d3',
+          700: '#a21caf',
+          800: '#86198f',
+          900: '#701a75',
+          950: '#4a044e',
+        },
         gray: {
           50: '#f9fafb',
           100: '#f3f4f6',
@@ -32,30 +58,6 @@ export default {
           700: '#d4d4d4',
           800: '#e5e5e5',
           900: '#f5f5f5',
-        },
-        primary: {
-          50: '#eefbff',
-          100: '#c9f2ff',
-          200: '#97e8ff',
-          300: '#54d5ff',
-          400: '#1ebcff',
-          500: '#0099ff',
-          600: '#0070cc',
-          700: '#0057a3',
-          800: '#004380',
-          900: '#00284d',
-        },
-        accent: {
-          50: '#fcf1ff',
-          100: '#f5d9ff',
-          200: '#eaafff',
-          300: '#dc75ff',
-          400: '#c941ff',
-          500: '#b618fc',
-          600: '#9b00db',
-          700: '#7c03ae',
-          800: '#640490',
-          900: '#390152',
         },
         success: '#00c853',
         warning: '#ffab00',
@@ -84,30 +86,30 @@ export default {
   },
   plugins: [
     function({ addUtilities }) {
-      const newUtilities = {
+      addUtilities({
         '.line-clamp-1': {
           display: '-webkit-box',
           '-webkit-line-clamp': '1',
           '-webkit-box-orient': 'vertical',
-          overflow: 'hidden',
+          'overflow': 'hidden',
         },
         '.line-clamp-2': {
           display: '-webkit-box',
           '-webkit-line-clamp': '2',
           '-webkit-box-orient': 'vertical',
-          overflow: 'hidden',
+          'overflow': 'hidden',
         },
         '.line-clamp-3': {
           display: '-webkit-box',
           '-webkit-line-clamp': '3',
           '-webkit-box-orient': 'vertical',
-          overflow: 'hidden',
+          'overflow': 'hidden',
         },
         '.line-clamp-none': {
-          '-webkit-line-clamp': 'unset',
+          display: 'block',
+          'overflow': 'visible',
         },
-      }
-      addUtilities(newUtilities, ['responsive'])
-    }
+      });
+    },
   ],
 } 
