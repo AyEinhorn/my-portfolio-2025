@@ -7,6 +7,8 @@ export default {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/contexts/**/*.{js,ts,jsx,tsx}",
     "./src/assets/**/*.{js,ts,jsx,tsx}",
+    "./src/layouts/**/*.{js,ts,jsx,tsx}",
+    "./src/styles/**/*.{js,ts,jsx,tsx,css}",
   ],
   darkMode: 'class',
   theme: {
